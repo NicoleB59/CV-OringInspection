@@ -23,8 +23,10 @@ def main():
             # greyscalling is easier for thresholding and histogram
             gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
+            # rezise the image
+            resize = cv2.resize(gray, (1000, 1000))
             # Display the grayscale image in a window titled "gray"
-            cv2.imshow("Gray", gray)
+            cv2.imshow(f"Gray - {filename}", resize)
 
             # wait until a key is pressed
             cv2.waitKey(0)
